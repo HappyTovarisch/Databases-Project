@@ -21,7 +21,7 @@ function getInfo() {
       } else {
         document.getElementsByClassName("sol").innerHTML = JSON.stringify(
           result
-        );
+        );  // for some reason this doesn't update the DOM?
         window.alert(document.getElementsByClassName("sol").innerHTML)
         console.log(document.getElementsByClassName("sol").innerHTML)
       }
