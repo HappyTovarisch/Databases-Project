@@ -9,21 +9,15 @@ var con = mysql.createConnection({
 
 con.connect();
 
-function getInfo() {
+function getInfo(country) {
   con.query(
-    `SELECT * FROM Countries_in_Europe WHERE Country_Name='${
-      document.getElementById("basic-url").value
-    }'`,
+    `SELECT * FROM Countries_in_Europe WHERE Country_Name='${country.toString()}'`,
     function(err, result, fields) {
       if (err) {
         console.log(document.getElementById("basic-url").value);
         throw err;
       } else {
-        document.getElementsByClassName("sol").innerHTML = JSON.stringify(
-          result
-        );  // for some reason this doesn't update the DOM?
-        window.alert(document.getElementsByClassName("sol").innerHTML)
-        console.log(document.getElementsByClassName("sol").innerHTML)
+        document.getElementById("sol").innerHTML = JSON.stringify(result);
       }
     }
   );
