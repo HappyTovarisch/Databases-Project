@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial scale=1" charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+            * {
+                box-sizing: border-box;
+            }
+            /* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    height: 900px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+</head>
+<body>
+
+<h2>Ethnicities of Europe</h2>
+
+<div class="row">
+    <div class="column" style="background-color:rgb(116, 116, 116);">
+        <h2>ID</h2>
+        <section><div id='ethnicIDs'></div></section>
+    </div>
+    <div class="column" style="background-color:rgb(138, 138, 138);">
+        <h2>Name</h2>
+        <section><div id='ethnicNames'></div></section>
+    </div>
+    <div class="column" style="background-color:rgb(167, 167, 167);">
+        <h2>Religion</h2>
+        <section><div id='ethnicRels'></div></section>
+    </div>
+    <div class="column" style="background-color:rgb(207, 207, 207);">
+        <h2>Country</h2>
+        <section><div id='ethnicCountries'></div></section>
+    </div>
+</div>
+<script src="ethnic.js"></script>
+</body>
+</html>
